@@ -1,6 +1,6 @@
 # ai-srs-service · AI Coding Rules & Skills (SKILLS)
 
-> **Source**: Extracted from `design/DESIGN.md` §5 (Domain Rules), §11 (Integration Points), §12 (Security & Multi-tenancy). These rules guide AI-assisted development within this repo.
+> **Source**: Extracted from `docs/DESIGN.md` §5 (Domain Rules), §11 (Integration Points), §12 (Security & Multi-tenancy). These rules guide AI-assisted development within this repo.
 
 ---
 
@@ -20,7 +20,7 @@ public void publish(Skill skill, String newVersion) {
     if (skill.isDependedOnByOthers()) {
         throw new SkillDepViolationException("Cannot delete; depended on by other skills");
     }
-    // Gray release: previous versions remain; only enabled version is active
+    // Canary release: previous versions remain; only enabled version is active
 }
 ```
 
@@ -210,4 +210,4 @@ Optional<SkillEntity> findByName(@Param("tenantId") String tenantId, @Param("nam
 
 ---
 
-> **References**: Full domain rules in `design/DESIGN.md` §5, §11, §12. Cross-reference `skills/SKILLS.md` in `ai-platform-api` for shared rules (bump-spi-version, tenant isolation).
+> **References**: Full domain rules in `docs/DESIGN.md` §5, §11, §12. Cross-reference `docs/SKILLS.md` in `ai-platform-api` for shared rules (bump-spi-version, tenant isolation).

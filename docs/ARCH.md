@@ -1,6 +1,6 @@
 # ai-srs-service · Architecture Decision Document (ARCH)
 
-> **Source**: Extracted from `design/DESIGN.md` §1, §2, §3, §6. Full design doc is the authority; this distillate captures architectural decisions, constraints, and SPI boundaries for implementers.
+> **Source**: Extracted from `docs/DESIGN.md` §1, §2, §3, §6. Full design doc is the authority; this distillate captures architectural decisions, constraints, and SPI boundaries for implementers.
 
 ---
 
@@ -12,7 +12,7 @@
 | Language / Framework | Java · Spring Boot 3.x (Jakarta Persistence) |
 | Optional | Yes — optional, lit from standard profile onwards |
 | Default Port | 8083 |
-| Platform Version | v1.4.0 |
+| Platform Version | v1.0.0 |
 | Deployment | 2 replicas, `ai-system` namespace, 500m CPU / 1Gi request |
 | Database | PostgreSQL@16.0 (core base), schema `srs` |
 
@@ -218,11 +218,11 @@ Agent → checkRules(input)
 | Valkey | External OSS | 7.2.0 | BSD-3 | optional | CachePort |
 | PostgreSQL | External OSS | 16.0 | PostgreSQL | core base | — (direct JPA) |
 | MinIO | External OSS | — | AGPL-3 | optional | ObjectStorePort |
-| ai-tool-registry | Internal (Go) | v1.4.0 | internal | core | SkillRegistryPort |
-| Agent Engine | Internal | v1.4.0 | internal | core | RuleEvalPort, resolve endpoint |
-| ai-platform-api | Internal (Java) | v1.4.0 | internal | optional | PolicyConsumerPort |
-| ai-admin-service | Internal (Java) | v1.4.0 | internal | optional | PolicyConsumerPort |
-| ai-eval-service | Internal (Python) | v1.4.0 | internal | standard+ | Skill testing |
+| ai-tool-registry | Internal (Go) | v1.0.0 | internal | core | SkillRegistryPort |
+| Agent Engine | Internal | v1.0.0 | internal | core | RuleEvalPort, resolve endpoint |
+| ai-platform-api | Internal (Java) | v1.0.0 | internal | optional | PolicyConsumerPort |
+| ai-admin-service | Internal (Java) | v1.0.0 | internal | optional | PolicyConsumerPort |
+| ai-eval-service | Internal (Python) | v1.0.0 | internal | standard+ | Skill testing |
 
 ---
 
@@ -295,8 +295,8 @@ Agent → checkRules(input)
 > **References**:
 > - Multi-version Skill management: §7.2 (semantic versioning, canary rollout, DAG dependency resolution)
 > - Multi-engine Rule dispatch: §7.3 (OPA/Rego + Drools coexistence, engine field routing)
-> - Full design: `design/DESIGN.md` (16 sections)
-> - Architecture framework: `../../OpenStrata架构设计文档 v2.8.md` §7, §10.4, §15.6, §16
-> - SPI contract tests: `skills/SKILLS.md` — `bump-spi-version` rule
-> - OpenAPI spec: `specs/SPECS.md` — endpoint table and data model DDL
+> - Full design: `docs/DESIGN.md` (16 sections)
+> - Architecture framework: `../../OpenStrata architecture design document v2.8.md` §7, §10.4, §15.5, §16
+> - SPI contract tests: `docs/SKILLS.md` — `bump-spi-version` rule
+> - OpenAPI spec: `docs/SPECS.md` — endpoint table and data model DDL
 > - Runtime resolution SLA: cache-hit <10ms, DB fallback <100ms
