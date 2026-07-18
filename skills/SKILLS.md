@@ -20,7 +20,7 @@ public void publish(Skill skill, String newVersion) {
     if (skill.isDependedOnByOthers()) {
         throw new SkillDepViolationException("Cannot delete; depended on by other skills");
     }
-    // Gray release: previous versions remain; only enabled version is active
+    // Canary release: previous versions remain; only enabled version is active
 }
 ```
 
