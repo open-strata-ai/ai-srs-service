@@ -1,0 +1,40 @@
+openstrata:
+  service:
+    port: 8083
+  features:
+    srs:
+      enabled: false               # starter=false; standard/advanced/full=true
+    skill-test:
+      enabled: true
+    rule-engine:
+      opa:
+        enabled: true
+      drools:
+        enabled: false
+    dev-mode:
+      enabled: false
+  spi:
+    auth:
+      provider: keycloak
+    cache:
+      provider: redis
+    object-store:
+      enabled: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/srs
+    username: srs
+    password: srs
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: srs
+        format_sql: true
+  flyway:
+    enabled: true
+    schemas: srs
+    locations: classpath:db/migration

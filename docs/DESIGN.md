@@ -89,6 +89,7 @@ classDiagram
     }
     class Rule {
         +RuleId ruleId
+        +TenantId tenantId
         +String name
         +SemVer version
         +EngineType engine
@@ -99,6 +100,7 @@ classDiagram
     }
     class Spec {
         +SpecId specId
+        +TenantId tenantId
         +String name
         +SpecKind kind
         +JsonSchema inputSchema
