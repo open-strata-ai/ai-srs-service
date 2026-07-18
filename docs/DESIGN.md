@@ -223,7 +223,7 @@ POST   /api/v1/skills/{name}/versions/{ver}:test       #Skill Test(Promptfoo)
   "code": "SKILL_DEP_CYCLE",
   "message": "Skill dependency exists: auth_check -> query_order -> auth_check",
   "traceId": "c0ffee",
-  "doc": "https://docs.openstrata.io/errors/SKILL_DEP_CYCLE"
+  "doc": "https://docs.openstrata.cc/errors/SKILL_DEP_CYCLE"
 }
 ```
 

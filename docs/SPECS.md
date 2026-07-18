@@ -55,7 +55,7 @@
   "code": "SKILL_DEP_CYCLE",
   "message": "Skill dependency contains cycle: auth_check → query_order → auth_check",
   "traceId": "c0ffee",
-  "doc": "https://docs.openstrata.io/errors/SKILL_DEP_CYCLE"
+  "doc": "https://docs.openstrata.cc/errors/SKILL_DEP_CYCLE"
 }
 ```
 
