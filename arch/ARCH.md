@@ -12,7 +12,7 @@
 | Language / Framework | Java · Spring Boot 3.x (Jakarta Persistence) |
 | Optional | Yes — optional, lit from standard profile onwards |
 | Default Port | 8083 |
-| Platform Version | v1.4.0 |
+| Platform Version | v1.0.0 |
 | Deployment | 2 replicas, `ai-system` namespace, 500m CPU / 1Gi request |
 | Database | PostgreSQL@16.0 (core base), schema `srs` |
 
@@ -218,11 +218,11 @@ Agent → checkRules(input)
 | Valkey | External OSS | 7.2.0 | BSD-3 | optional | CachePort |
 | PostgreSQL | External OSS | 16.0 | PostgreSQL | core base | — (direct JPA) |
 | MinIO | External OSS | — | AGPL-3 | optional | ObjectStorePort |
-| ai-tool-registry | Internal (Go) | v1.4.0 | internal | core | SkillRegistryPort |
-| Agent Engine | Internal | v1.4.0 | internal | core | RuleEvalPort, resolve endpoint |
-| ai-platform-api | Internal (Java) | v1.4.0 | internal | optional | PolicyConsumerPort |
-| ai-admin-service | Internal (Java) | v1.4.0 | internal | optional | PolicyConsumerPort |
-| ai-eval-service | Internal (Python) | v1.4.0 | internal | standard+ | Skill testing |
+| ai-tool-registry | Internal (Go) | v1.0.0 | internal | core | SkillRegistryPort |
+| Agent Engine | Internal | v1.0.0 | internal | core | RuleEvalPort, resolve endpoint |
+| ai-platform-api | Internal (Java) | v1.0.0 | internal | optional | PolicyConsumerPort |
+| ai-admin-service | Internal (Java) | v1.0.0 | internal | optional | PolicyConsumerPort |
+| ai-eval-service | Internal (Python) | v1.0.0 | internal | standard+ | Skill testing |
 
 ---
 

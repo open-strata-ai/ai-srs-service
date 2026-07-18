@@ -7,7 +7,7 @@
 > | Language · Framework | Java · Spring Boot 3.x (Jakarta Persistence, §15.5.1) |
 > | domain | agent-infra |
 > | optional | Yes (optional, phase 2 standard is turned on, see `repos.yaml` / `profiles/standard.yaml`) |
-> | Platform version | v1.4.0 |
+> | Platform version | v1.0.0 |
 > | Document Status | Draft |
 > | Responsible person | OpenStrata Architecture Group |
 > | Related links | [arch](./arch/ARCH.md) · [skills](./skills/SKILLS.md) · [specs](./specs/SPECS.md) · Architecture document [§7](../../OpenStrata Architecture Design Document v2.8.md) [§10.4](../../OpenStrata Architecture Design Document v2.8.md) [§15.5](../../OpenStrata Architecture Design Document v2.8.md) [§16](../../OpenStrata Architecture Design Document v2.8.md) |
@@ -380,11 +380,11 @@ openstrata:
 | Redis / Valkey | External OSS (Cache SPI) | redis@7.4.0 ✅ / valkey@7.2.0 optional | Cache (§16.3) |
 | PostgreSQL | base base | postgresql@16.0 ✅ core | persistence |
 | MinIO (optional) | External OSS (Object Storage) | Object Storage base | Skill package/example (§8.2 Isolation Matrix) |
-| ai-tool-registry | Internal Services | Go v1.4.0 | Skill ⇄ MCP Tools (§4.3.2) |
+| ai-tool-registry | Internal Services | Go v1.0.0 | Skill ⇄ MCP Tools (§4.3.2) |
 | Agent engine | Internal/runtime | ai-gateway-core, etc. | Loading/verifying SRS (§7.1) |
-| ai-platform-api | Internal Services | Java v1.4.0 | Policy Reference/Approval (§14) |
-| ai-admin-service | Internal service | Java v1.4.0 | Advanced guardrail delivery (§14) |
-| ai-eval-service | Internal Service | Python v1.4.0 | Skill Test (Promptfoo, §7.2) |
+| ai-platform-api | Internal Services | Java v1.0.0 | Policy Reference/Approval (§14) |
+| ai-admin-service | Internal service | Java v1.0.0 | Advanced guardrail delivery (§14) |
+| ai-eval-service | Internal Service | Python v1.0.0 | Skill Test (Promptfoo, §7.2) |
 
 ---
 
@@ -408,7 +408,7 @@ openstrata:
 
 ## 14. Deployment and elasticity (K8s resources/HPA/probes)
 
-- **Deployment**: `ai-srs-service`, stateless, 2 replicas; image `openstrata/ai-srs-service:v1.4.0`.
+- **Deployment**: `ai-srs-service`, stateless, 2 replicas; image `openstrata/ai-srs-service:v1.0.0`.
 - **namespace**: shared `ai-system` (§9.2).
 - **Probe**:
   - liveness：`GET /actuator/health/liveness`
