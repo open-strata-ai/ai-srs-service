@@ -1,15 +1,15 @@
-# ADR-0001: SRS and AgentSpec convergence
+# ADR-0003: Version canary mechanism
 
-- **Status**: Pending (Open)
+- **Status**: Proposed
 - **Date**: 2026-07-17
 - **Suggested by**: OpenStrata Architecture Group
 - **Repository**: ai-srs-service
-- **Source**: `design/DESIGN.md` §16 Open Issue
+- **Source**: `docs/DESIGN.md` §16 Open Issue
 - **Association**: (within this repository)
 
 ##Context
 
-How is the `AgentSpec` in §4.3.5 formally related to the Skill/Tool binding in this article? `tool_bindings` needs to be defined to reference the specification (ADR) of the SRS skill.
+Is "canary switching" under multi-version coexistence per tenant or globally? Recommended tenant level default + canary publishing window.
 
 ## Decision Options (Options Considered)
 
@@ -19,7 +19,7 @@ How is the `AgentSpec` in §4.3.5 formally related to the Skill/Tool binding in 
 
 ## Recommended decision (Decision)
 
-This ADR solidifies "SRS and AgentSpec convergence" into an architectural decision record and incorporates it into `design/adr/` for continuous tracking. This issue stems from the `design/DESIGN.md` §16 open issue and is still open.
+This ADR solidifies the "canary version mechanism" into an architectural decision record and incorporates it into `docs/adr/` for continuous tracking. This issue stems from the `docs/DESIGN.md` §16 open issue and is still open.
 
 **Conservative Default Principle**: Before the final decision is made, the "minimum available + explicit configuration switch" shall prevail, maintain the current behavior, and not destroy the existing contract and cross-repository SPI interface; this ADR status will be written back after review by the relevant team.
 
@@ -27,10 +27,9 @@ This ADR solidifies "SRS and AgentSpec convergence" into an architectural decisi
 
 ## To be aligned / Follow-ups (Follow-ups)
 
-- Associated architecture documents §4.3.5 (as a basis for decision-making and a source of consistency verification).
 - Solidify the decision before the review at the corresponding stage, and write the final conclusion back into this ADR (the status is changed from "Pending" to "Adopted").
 
 ## Traceback
 
-- Upstream design: `design/DESIGN.md` §16 Open issue
-- Relevance index: see `design/adr/README.md`
+- Upstream design: `docs/DESIGN.md` §16 Open issue
+- Relevance index: see `docs/adr/README.md`

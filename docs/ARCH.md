@@ -1,6 +1,6 @@
 # ai-srs-service · Architecture Decision Document (ARCH)
 
-> **Source**: Extracted from `design/DESIGN.md` §1, §2, §3, §6. Full design doc is the authority; this distillate captures architectural decisions, constraints, and SPI boundaries for implementers.
+> **Source**: Extracted from `docs/DESIGN.md` §1, §2, §3, §6. Full design doc is the authority; this distillate captures architectural decisions, constraints, and SPI boundaries for implementers.
 
 ---
 
@@ -295,8 +295,8 @@ Agent → checkRules(input)
 > **References**:
 > - Multi-version Skill management: §7.2 (semantic versioning, canary rollout, DAG dependency resolution)
 > - Multi-engine Rule dispatch: §7.3 (OPA/Rego + Drools coexistence, engine field routing)
-> - Full design: `design/DESIGN.md` (16 sections)
+> - Full design: `docs/DESIGN.md` (16 sections)
 > - Architecture framework: `../../OpenStrata architecture design document v2.8.md` §7, §10.4, §15.5, §16
-> - SPI contract tests: `skills/SKILLS.md` — `bump-spi-version` rule
-> - OpenAPI spec: `specs/SPECS.md` — endpoint table and data model DDL
+> - SPI contract tests: `docs/SKILLS.md` — `bump-spi-version` rule
+> - OpenAPI spec: `docs/SPECS.md` — endpoint table and data model DDL
 > - Runtime resolution SLA: cache-hit <10ms, DB fallback <100ms
