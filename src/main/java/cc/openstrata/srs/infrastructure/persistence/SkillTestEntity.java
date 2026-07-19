@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import jakarta.persistence.Table;
 
 /** JPA mapping for the {@code skill_tests} table (SPECS §2.2). */
@@ -21,7 +23,7 @@ public class SkillTestEntity {
     @Column(name = "status", length = 16, nullable = false)
     private String status;
 
-    @Lob
+    @JdbcTypeCode(SqlTypes.LONGVARCHAR)
     @Column(name = "report")
     private String report;
 

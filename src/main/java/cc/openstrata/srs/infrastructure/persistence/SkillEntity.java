@@ -4,6 +4,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
 
@@ -29,11 +31,11 @@ public class SkillEntity {
     @Column(name = "type", length = 32, nullable = false)
     private String type;
 
-    @Lob
+    @JdbcTypeCode(SqlTypes.LONGVARCHAR)
     @Column(name = "schema_json", nullable = false)
     private String schemaJson;
 
-    @Lob
+    @JdbcTypeCode(SqlTypes.LONGVARCHAR)
     @Column(name = "deps_json")
     private String depsJson;
 

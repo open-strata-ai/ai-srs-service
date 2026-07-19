@@ -1,0 +1,60 @@
+openstrata:
+  service:
+    port: 8083
+  features:
+    srs:
+      enabled: false
+    skill-test:
+      enabled: true
+    rule-engine:
+      opa:
+        enabled: true
+      drools:
+        enabled: false
+    dev-mode:
+      enabled: false
+  spi:
+    auth:
+      provider: keycloak
+    cache:
+      provider: redis
+    object-store:
+      enabled: false
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/srs
+    username: srs
+    password: srs
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: srs
+        format_sql: true
+  flyway:
+    enabled: true
+    schemas: srs
+    locations: classpath:db/migration
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  autoconfigure:
+    exclude:  # Enable Redis in prod
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://postgres:5432/srs}
+    username: ${DATABASE_USER:srs}
+    password: ${DATABASE_PASSWORD:srs}
+  data:
+    redis:
+      host: ${REDIS_HOST:redis}
+      port: ${REDIS_PORT:6379}
