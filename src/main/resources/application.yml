@@ -50,10 +50,18 @@ spring:
       on-profile: prod
   autoconfigure:
     exclude:  # Enable Redis in prod
+  openstrata:
+    features:
+      srs:
+        enabled: true
   datasource:
     url: ${DATABASE_URL:jdbc:postgresql://postgres:5432/srs}
     username: ${DATABASE_USER:srs}
     password: ${DATABASE_PASSWORD:srs}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   data:
     redis:
       host: ${REDIS_HOST:redis}
