@@ -4,6 +4,7 @@ import cc.openstrata.srs.domain.port.CachePort;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
  * this in-memory map keeps {@code mvn test} network-free.
  */
 @Component
+@Profile("!prod")
 public class InMemoryCacheAdapter implements CachePort {
 
     private final ConcurrentMap<String, String> store = new ConcurrentHashMap<>();
