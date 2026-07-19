@@ -1,0 +1,11 @@
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/SrsServiceApplicationTests.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/application/RuleAppServiceTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/application/SpecAppServiceTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/domain/SemVerTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/domain/service/RuleEngineDispatchTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/domain/service/SkillDepResolverTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/domain/service/SkillVersionServiceTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/domain/service/SpecValidatorTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/domain/service/SrsRbacRuleTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/infrastructure/adapter/RedisCacheAdapterTest.java
+/Users/weiping/Code/openstrata/ai-srs-service/src/test/java/cc/openstrata/srs/web/SrsControllerTest.java
