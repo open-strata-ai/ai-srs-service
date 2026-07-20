@@ -106,6 +106,15 @@ public class SkillAppService {
         return toResponse(entity);
     }
 
+    /** List distinct skill names for a tenant (consumed by ai-platform-api SrsPort). */
+    @Transactional(readOnly = true)
+    public List<String> listNames(String tenant) {
+        return repo.findByTenantId(tenant).stream()
+            .map(SkillEntity::getName)
+            .distinct()
+            .collect(Collectors.toList());
+    }
+
     @Transactional
     public SkillResponse deprecate(String name) {
         String tenant = tenant();

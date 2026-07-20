@@ -1,0 +1,129 @@
+{
+  "groups": [
+    {
+      "name": "openstrata",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties"
+    },
+    {
+      "name": "openstrata.features",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features getFeatures() "
+    },
+    {
+      "name": "openstrata.features.dev-mode",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features$DevMode",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features.DevMode getDevMode() "
+    },
+    {
+      "name": "openstrata.features.rule-engine",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features.RuleEngine getRuleEngine() "
+    },
+    {
+      "name": "openstrata.features.rule-engine.drools",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine$Engine",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features.RuleEngine.Engine getDrools() "
+    },
+    {
+      "name": "openstrata.features.rule-engine.opa",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine$Engine",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features.RuleEngine.Engine getOpa() "
+    },
+    {
+      "name": "openstrata.features.skill-test",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features$SkillTest",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features.SkillTest getSkillTest() "
+    },
+    {
+      "name": "openstrata.features.srs",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Features$Srs",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Features.Srs getSrs() "
+    },
+    {
+      "name": "openstrata.service",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Service",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Service getService() "
+    },
+    {
+      "name": "openstrata.spi",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Spi",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Spi getSpi() "
+    },
+    {
+      "name": "openstrata.spi.auth",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Spi$Provider",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Spi",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Spi.Provider getAuth() "
+    },
+    {
+      "name": "openstrata.spi.cache",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Spi$Provider",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Spi",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Spi.Provider getCache() "
+    },
+    {
+      "name": "openstrata.spi.object-store",
+      "type": "cc.openstrata.srs.config.OpenstrataProperties$Spi$ObjectStore",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Spi",
+      "sourceMethod": "public cc.openstrata.srs.config.OpenstrataProperties.Spi.ObjectStore getObjectStore() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "openstrata.features.dev-mode.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$DevMode"
+    },
+    {
+      "name": "openstrata.features.rule-engine.drools.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine$Engine"
+    },
+    {
+      "name": "openstrata.features.rule-engine.opa.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$RuleEngine$Engine"
+    },
+    {
+      "name": "openstrata.features.skill-test.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$SkillTest"
+    },
+    {
+      "name": "openstrata.features.srs.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Features$Srs"
+    },
+    {
+      "name": "openstrata.service.port",
+      "type": "java.lang.Integer",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Service"
+    },
+    {
+      "name": "openstrata.spi.auth.provider",
+      "type": "java.lang.String",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Spi$Provider"
+    },
+    {
+      "name": "openstrata.spi.cache.provider",
+      "type": "java.lang.String",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Spi$Provider"
+    },
+    {
+      "name": "openstrata.spi.object-store.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "cc.openstrata.srs.config.OpenstrataProperties$Spi$ObjectStore"
+    }
+  ],
+  "hints": []
+}

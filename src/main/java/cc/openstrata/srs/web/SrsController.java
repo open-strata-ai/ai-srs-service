@@ -83,6 +83,13 @@ public class SrsController {
         return skills.get(name);
     }
 
+    /** Tenant-scoped skill name listing (used by ai-platform-api SrsPort). */
+    @GetMapping("/skills")
+    public List<String> listSkills(@RequestParam String tenant) {
+        requireSrs();
+        return skills.listNames(tenant);
+    }
+
     @GetMapping("/skills/{name}/versions/{ver}")
     public SkillResponse getSkillVersion(@PathVariable String name, @PathVariable String ver) {
         requireSrs();
